@@ -3,14 +3,14 @@ from bs4 import BeautifulSoup
 import csv
 import re
 
-# URL of the Wikipedia article you want to crawl
+# URL of the Wikipedia article
 url = "https://en.wikipedia.org/wiki/List_of_computer_scientists"
 
-# Send an HTTP GET request to the URL
+# HTTP GET request to the URL
 response = requests.get(url)
 
 if response.status_code == 200:
-    # Parse the HTML content of the page
+    # Parsing the HTML content of the page
     soup = BeautifulSoup(response.text, 'html.parser')
 
     mw_parser_output = soup.find('div', {'class': 'mw-parser-output'})
@@ -31,8 +31,7 @@ if response.status_code == 200:
         if scientist_response.status_code == 200:
             scientist_soup = BeautifulSoup(scientist_response.text, 'html.parser')
 
-            # Extract information from the scientist's Wikipedia page as needed
-            # Example: Extract the page title
+            # Extract information from the scientist's Wikipedia page 
             infobox_table = scientist_soup.find('table', {'class': 'infobox biography vcard'})
 
             if infobox_table:
@@ -48,7 +47,7 @@ if response.status_code == 200:
                         header_text = header.get_text(strip=True)
                         data_text = data.get_text(strip=True)
 
-                        if re.search(r"Alma\s*?mater", header_text, re.I):  # Match "Alma mater" with optional spaces
+                        if re.search(r"Alma\s*?mater", header_text, re.I):  # Match "Alma mater" with optional spaces ???? -> ερώτηση για τερματισμό / πότε να γίνει
                             alma_mater_values = [almamater.get_text(strip=True) for almamater in data.find_all('a')]
                             alma_mater.extend(alma_mater_values)
 
