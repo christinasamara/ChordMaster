@@ -1,4 +1,6 @@
 import hashlib 
+import networkx as nx
+import matplotlib.pyplot as plt
 K = 4
 SIZE = 2 ** K
 
@@ -122,6 +124,27 @@ class Node:
             self.prev.stabilization()
 
 
+    def visualize_chord_ring(self):
+        G = nx.DiGraph()
+
+        current_node = self
+        start_node = self
+
+        while True:
+            G.add_node(current_node.id)
+            G.add_edge(current_node.id, current_node.fingerTable[0].id)
+
+            current_node = current_node.fingerTable[0]
+
+            if current_node == start_node:
+                break
+
+        pos = nx.circular_layout(G)
+        nx.draw(G, pos, with_labels=True, arrowsize=20, node_size=700, node_color="skyblue", font_size=8)
+        plt.title("Chord Ring Visualization")
+        plt.show()
+
+
     def print(self):
         print("Node id: ", self.id)
         print("Node data: ", self.data)
@@ -135,44 +158,15 @@ class Node:
 
 
 
-node0 = Node(0)
-node0.join(node0)
 
-node0.print()
 
-print("~~~~~~~~~~")
+nodes = [Node(i) for i in range(15)]
+nodes[0].join(nodes[0])
+for i in range(1, 15):
+    nodes[0].join(nodes[i])
+nodes[0].visualize_chord_ring()
 
-node1 = Node(1)
-node0.join(node1)
 
-node0.print()
-node1.print()
-
-print("~~~~~~~~~~")
-
-node2 = Node(2)
-node0.join(node2)
-
-node0.print()
-node1.print()
-node2.print()
-
-print("~~~~~~~~~~")
-
-# node2.delete()
-# 
-# node0.print()
-# node1.print()
-
-print("~~~~~~~~~~")
-
-node15 = Node(15)
-node0.join(node15)
-
-node0.print()
-node1.print()
-node2.print()
-node15.print()
 
 
 
