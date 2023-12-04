@@ -1,6 +1,8 @@
 import hashlib 
 import networkx as nx
 import matplotlib.pyplot as plt
+import holoviews as hv
+
 K = 4
 SIZE = 2 ** K
 
@@ -88,6 +90,7 @@ class Node:
             # newNode.updateFingerTable()
             newNode.stabilization()
 
+
     def ins_stabilization(node, startnode):
         node.updateFingerTable()
         next_node = node.fingerTable[0]
@@ -98,9 +101,6 @@ class Node:
         startnode = self
         self.ins_stabilization(startnode)
         # add timer so stabilizarion() is running frequently
-
-
-
 
 
     def delete(self):
@@ -132,7 +132,8 @@ class Node:
 
         while True:
             G.add_node(current_node.id)
-            G.add_edge(current_node.id, current_node.fingerTable[0].id)
+            for finger_node in current_node.fingerTable:
+                G.add_edge(current_node.id, finger_node.id)
 
             current_node = current_node.fingerTable[0]
             if current_node == start_node:
@@ -154,23 +155,3 @@ class Node:
         else:
             print("[]")
         print()
-
-
-
-
-
-nodes = [Node(i) for i in range(16)]
-
-
-nodes[0].join(nodes[0])
-for i in range(1, 16):
-    nodes[0].join(nodes[i])
-nodes[0].visualize_chord_ring()
-
-nodes[0].delete()
-
-nodes[1].visualize_chord_ring()
-
-
-
-
