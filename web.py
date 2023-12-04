@@ -31,7 +31,7 @@ if response.status_code == 200:
         if scientist_response.status_code == 200:
             scientist_soup = BeautifulSoup(scientist_response.text, 'html.parser')
 
-            # Extract information from the scientist's Wikipedia page 
+            # Extract info
             infobox_table = scientist_soup.find('table', {'class': 'infobox biography vcard'})
 
             if infobox_table:

@@ -78,18 +78,17 @@ class Node:
             newNode.fingerTable.append(afterNode)
 
             # transfer suitable data to newNode and delete them from afterNode
-            for key in afterNode.data.keys():
-                hashId = self.getHashId(key)
-                if (self.distance(hashId, newNode.ID) < self.distance(hashId, afterNode.ID)):
-                    newNode.data[key] = afterNode.data[key]
-                    del afterNode.data[key]
+            # for key in afterNode.data.keys():
+            #     hashId = self.getHashId(key)
+            #     if (self.distance(hashId, newNode.ID) < self.distance(hashId, afterNode.ID)):
+            #         newNode.data[key] = afterNode.data[key]
+            #         del afterNode.data[key]
                     
             # being updated by stabilization
             # newNode.updateFingerTable()
             newNode.stabilization()
 
     def ins_stabilization(node, startnode):
-        print("another one")
         node.updateFingerTable()
         next_node = node.fingerTable[0]
         if next_node != startnode:
@@ -98,6 +97,7 @@ class Node:
     def stabilization(self):
         startnode = self
         self.ins_stabilization(startnode)
+        # add timer so stabilizarion() is running frequently
 
 
 
@@ -113,8 +113,8 @@ class Node:
             self.fingerTable[0].prev = self.prev
 
             # transfer the data to the next node
-            for key, value in self.data.items():
-                self.fingerTable[0].data[key] = value
+            # for key, value in self.data.items():
+            #     self.fingerTable[0].data[key] = value
 
 
             # they are being updated by stabilization anyway
@@ -135,7 +135,6 @@ class Node:
             G.add_edge(current_node.id, current_node.fingerTable[0].id)
 
             current_node = current_node.fingerTable[0]
-
             if current_node == start_node:
                 break
 
@@ -160,13 +159,17 @@ class Node:
 
 
 
-nodes = [Node(i) for i in range(15)]
+nodes = [Node(i) for i in range(16)]
+
+
 nodes[0].join(nodes[0])
-for i in range(1, 15):
+for i in range(1, 16):
     nodes[0].join(nodes[i])
 nodes[0].visualize_chord_ring()
 
+nodes[0].delete()
 
+nodes[1].visualize_chord_ring()
 
 
 
