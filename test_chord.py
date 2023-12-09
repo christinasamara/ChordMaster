@@ -15,6 +15,6 @@ nodes[0].delete()
 
 nodes[1].visualize_chord_ring()
 
-
+nodes[8].print()
 
 

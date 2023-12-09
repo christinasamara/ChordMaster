@@ -65,7 +65,7 @@ class Node:
 
 
             # updated by stabilization
-            # self.updateFingerTable()
+            self.updateFingerTable()
             self.stabilization()
 
         elif (afterNode.id == newNode.id):
@@ -87,30 +87,34 @@ class Node:
             #         del afterNode.data[key]
                     
             # being updated by stabilization
-            # newNode.updateFingerTable()
+            newNode.updateFingerTable()
             newNode.stabilization()
 
 
-    def ins_stabilization(node, startnode):
-        node.updateFingerTable()
-        next_node = node.fingerTable[0]
+    def ins_stabilization(self, startnode):
+        self.updateFingerTable()
+        next_node = self.fingerTable[0]
         if next_node != startnode:
             next_node.ins_stabilization(startnode)  # Recursive call using the method of the current node
 
     def stabilization(self):
         startnode = self
+        startnode.updateFingerTable()
         self.ins_stabilization(startnode)
+
         # add timer so stabilizarion() is running frequently
 
 
     def delete(self):
-        if (self.prev == self and self.next == self):
+        if (self.prev == self and self.fingerTable[0] == self):
             # only node in chord
             # clean its data
             pass
         else:
+            extra_node = self.prev
             self.prev.fingerTable[0] = self.fingerTable[0]
             self.fingerTable[0].prev = self.prev
+
 
             # transfer the data to the next node
             # for key, value in self.data.items():
@@ -118,10 +122,23 @@ class Node:
 
 
             # they are being updated by stabilization anyway
-            # self.prev.updateFingerTable()
-            # self.fingerTable[0].updateFingerTable()
+            self.prev.updateFingerTable()
+            self.fingerTable[0].updateFingerTable()
+            
+            deleted_node = self
+            startnode = self.prev
+            current_node = startnode.fingerTable[0]
+            while True:
+                if current_node == startnode:
+                    break
+                for i in range(len(current_node.fingerTable)):
+                    if current_node.fingerTable[i] == deleted_node:
+                        current_node.fingerTable[i] = deleted_node.fingerTable[0]
+                current_node = current_node.fingerTable[0]
 
-            self.prev.stabilization()
+
+
+            # self.prev.stabilization()
 
 
     def visualize_chord_ring(self):
@@ -132,9 +149,14 @@ class Node:
 
         while True:
             G.add_node(current_node.id)
-            for finger_node in current_node.fingerTable:
+    
+            # Draw a line to fingertable[0] for all nodes
+            G.add_edge(current_node.id, current_node.fingerTable[0].id)
+        
+            # Draw other finger table connections
+            for finger_node in current_node.fingerTable[1:]:
                 G.add_edge(current_node.id, finger_node.id)
-
+        
             current_node = current_node.fingerTable[0]
             if current_node == start_node:
                 break
@@ -155,3 +177,18 @@ class Node:
         else:
             print("[]")
         print()
+
+nodes = [Node(i) for i in range(SIZE)]
+
+
+nodes[0].join(nodes[0])
+for i in range(1, SIZE):
+    nodes[0].join(nodes[i])
+
+nodes[0].visualize_chord_ring()
+
+nodes[0].delete()
+nodes[8].updateFingerTable()
+nodes[1].visualize_chord_ring()
+
+nodes[8].print()
