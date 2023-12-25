@@ -2,6 +2,10 @@ import hashlib
 import networkx as nx
 import matplotlib.pyplot as plt
 import holoviews as hv
+from holoviews import opts, dim
+hv.extension('bokeh')
+import pandas as pd
+
 
 K = 4
 SIZE = 2 ** K
@@ -98,9 +102,11 @@ class Node:
             next_node.ins_stabilization(startnode)  # Recursive call using the method of the current node
 
     def stabilization(self):
-        startnode = self
-        startnode.updateFingerTable()
-        self.ins_stabilization(startnode)
+        self.updateFingerTable()
+        current = self.fingerTable[0]
+        while current != self:
+            current.updateFingerTable()
+            current = current.fingerTable[0]
 
         # add timer so stabilizarion() is running frequently
 
@@ -138,10 +144,10 @@ class Node:
 
 
 
-            # self.prev.stabilization()
+            self.prev.stabilization()
 
 
-    def visualize_chord_ring(self):
+    def visualize_chord(self):
         G = nx.DiGraph()
 
         current_node = self
@@ -149,12 +155,9 @@ class Node:
 
         while True:
             G.add_node(current_node.id)
-    
-            # Draw a line to fingertable[0] for all nodes
-            G.add_edge(current_node.id, current_node.fingerTable[0].id)
         
             # Draw other finger table connections
-            for finger_node in current_node.fingerTable[1:]:
+            for finger_node in current_node.fingerTable:
                 G.add_edge(current_node.id, finger_node.id)
         
             current_node = current_node.fingerTable[0]
@@ -166,6 +169,29 @@ class Node:
         plt.title("Chord Ring Visualization")
         plt.show()
 
+    def visualize_chord_ring(self):
+        links = []
+        current_node = self
+        start_node = self
+        while True:
+            # Add links for finger table connections
+            for finger_node in current_node.fingerTable:
+                links.append((current_node.id, finger_node.id))
+
+            current_node = current_node.fingerTable[0]
+            if current_node == start_node:
+                break
+        # Convert links to a DataFrame
+        links_df = pd.DataFrame(links, columns=['source', 'target'])
+        # Create Chord diagram using Holoviews
+        chord_diagram = hv.Chord(links_df)
+        # Customize appearance
+        chord_diagram.opts(
+            opts.Chord(cmap='Category20', edge_cmap='Category20', edge_color=dim('source').str(), labels='index', node_color='index')
+        )
+        # Display the Chord diagram
+        hv.save(chord_diagram, 'chord_diagram.html')  # Optionally save as HTML file
+        hv.render(chord_diagram)
 
     def print(self):
         print("Node id: ", self.id)
@@ -178,17 +204,4 @@ class Node:
             print("[]")
         print()
 
-nodes = [Node(i) for i in range(SIZE)]
 
-
-nodes[0].join(nodes[0])
-for i in range(1, SIZE):
-    nodes[0].join(nodes[i])
-
-nodes[0].visualize_chord_ring()
-
-nodes[0].delete()
-nodes[8].updateFingerTable()
-nodes[1].visualize_chord_ring()
-
-nodes[8].print()

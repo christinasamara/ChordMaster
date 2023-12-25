@@ -11,10 +11,9 @@ for i in range(1, SIZE):
 
 nodes[0].visualize_chord_ring()
 
-nodes[0].delete()
+for node in nodes:
+    node.print()
 
-nodes[1].visualize_chord_ring()
 
-nodes[8].print()
 
 
