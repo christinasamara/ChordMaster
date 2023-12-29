@@ -5,7 +5,7 @@ from sklearn.neighbors import NearestNeighbors
 from lsh import lsh
 import pandas as pd
 
-my_stop_words = ["university", "of", "Institute"]
+my_stop_words = ["University", "of", "Institute"]
 
 def hash_tfidf_matrix(X_tfidf):
     # Convert the sparse matrix to a dense array before hashing
@@ -20,7 +20,7 @@ def lsh_with_chord(df, chord_ring_size=16):
     # Vectorize education strings
     tfidf_vectorizer = TfidfVectorizer(
         analyzer='char_wb',
-        ngram_range=(1, 3),
+        ngram_range=(4, 5),
         min_df=0,
         stop_words=my_stop_words
     )

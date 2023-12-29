@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.feature_extraction import text
 from sklearn.feature_extraction.text import TfidfVectorizer,CountVectorizer
 
-my_stop_words = text.ENGLISH_STOP_WORDS.union(["University"])
+my_stop_words = ["university", "of", "intitute", "college"]
 
 def lsh(df):
     tfidf = TfidfVectorizer(
@@ -124,7 +124,7 @@ def lsh(df):
         nearest_neighbors = pd.DataFrame({
             'id': candidate_list, distance_col: distance
         }).sort_values(distance_col).reset_index(drop=True)
-        test = nearest_neighbors.loc[nearest_neighbors['distance'] <0.8]
+        test = nearest_neighbors.loc[nearest_neighbors['distance'] <0.6]
         return test
 
     #print('original similar items:\n' + str(similar_items))

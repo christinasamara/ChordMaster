@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import csv
 import re
 
-with open('data.csv', 'a', newline='\n', encoding="utf-8") as csv_file:
+with open('data.csv', 'w', newline='\n', encoding="utf-8") as csv_file:
     csv_writer = csv.writer(csv_file)
     csv_writer.writerow(["SURNAME", "EDUCATION", "AWARDS"])
 # URL of the Wikipedia article
@@ -38,8 +38,7 @@ if response.status_code == 200:
             infobox_table = scientist_soup.find('table', {'class': 'infobox biography vcard'})
 
             if infobox_table:
-                name_old = link.split("/")[-1].replace("_", " ")
-                name = " ".join(reversed(name_old.split()))
+                name = link.split("/")[-1].replace("_", " ")
                 alma_mater = []
                 awards = None
 
@@ -61,7 +60,7 @@ if response.status_code == 200:
                 if awards is None:
                     awards = 0
                 if not alma_mater:
-                    alma_mater = ["unknown"]
+                    continue
                 alma_mater_str = ' '.join([value.replace(',', '') for value in alma_mater])
                 print(name, alma_mater_str)
                 with open('data.csv', 'a', newline='\n', encoding="utf-8") as csv_file:
@@ -69,3 +68,8 @@ if response.status_code == 200:
                     csv_writer.writerow([name, alma_mater_str, awards])                
 else:
     print(f"Failed to retrieve the webpage. Status code: {response.status_code}")
+
+# to be solved
+# -> if alma_mater unknown, pass
+# -> some names have (computer scientist) next to them
+# -> web crawler reaching end

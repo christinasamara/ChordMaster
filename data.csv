@@ -1,58 +1,152 @@
 SURNAME,EDUCATION,AWARDS
-Khan Rehman ur Atta,University of Malaya COMSATS University,0
-Aalst der van Wil,unknown,0
-Aaronson Scott,Cornell University University of California Berkeley,4
-Abebe Rediet,Cornell University University of Cambridge Harvard University,0
-Abelson Hal,Princeton University Massachusetts Institute of Technology,1
-Abiteboul Serge,University of Southern California,7
-Abramsky Samson,King's College Cambridge Queen Mary University of London,5
-Adleman Leonard,University of California Berkeley,1
-Agrawal Manindra,Indian Institute of Technology Kanpur,8
-Ahn von Luis,Duke University BS Carnegie Mellon University,4
-Aho Alfred,University of Toronto Princeton University,5
-Allen E. Frances,University at Albany University of Michigan,7
-Amdahl Gene,South Dakota State University BS University of Wisconsin MS PhD,3
-Anderson P. David,Wesleyan University University of Wisconsin-Madison,1
-Appel Andrew,unknown,0
-Aragon R. Cecilia,California Institute of Technology University of California Berkeley,1
-Arden Bruce,unknown,0
-Jones Angie,Tennessee State University North Carolina State University ,0
-Arora Sanjeev,SB Massachusetts Institute of Technology PhD UC Berkeley,0
-Asprey Winifred,Vassar College University of Iowa,0
-Atanasoff Vincent John,University of Florida Iowa State University University of Wisconsin–Madison,1
-Atre Shakuntala,unknown,0
-Babbage Charles,Peterhouse Cambridge,1
-Bachman Charles,University of Pennsylvania Michigan State University,3
-Backhouse Carl Roland,unknown,0
-Backus John,University of Virginia University of Pittsburgh Haverford College Columbia University,3
-Bacon F. David,U.C. Berkeley,1
-Bader David,Lehigh University University of Maryland College Park,11
-Bahl Victor,University of Massachusetts Amherst Modern School New Delhi,0
-Barr James Anthony,North Carolina State University,0
-Bartik Jean,Northwest Missouri State Teachers College University of Pennsylvania,2
-Barto Andrew,University of Michigan,2
-Bauer L. Friedrich,unknown,3
-Bayer Rudolf,University of Illinois at Urbana–Champaign,2
-Bell Gordon,MIT,3
-Bellovin M. Steven,unknown,0
-Berdichevsky Cecilia,unknown,0
-Berners-Lee Tim,unknown,5
-Bernstein J. Daniel,University of California Berkeley New York University,0
-Bhushan Abhay,Indian Institute of Technology Kanpur Massachusetts Institute of Technology MIT Sloan School of Management,0
-Bj%C3%B8rner Dines,Technical University of Denmark,2
-computer Black Sue,London South Bank University,0
-Blei David,Brown University University of California Berkeley,2
-Blum Dorothy,Brooklyn College,0
-Blum Lenore,Simmons College Massachusetts Institute of Technology,4
-Blum Manuel,Massachusetts Institute of Technology BA MA PhD,1
-B%C3%B6hm Corrado,ETH Zürich,0
-Booch Grady,unknown,2
-Boole George,unknown,0
-Booth Donald Andrew,Jesus College,0
-Booth Kathleen,unknown,0
-Borg Anita,New York University,0
-Bos Bert,unknown,0
-Bowen Jonathan,University College Oxford,2
-Bourne R. Stephen,unknown,3
-Bouwman Harry,unknown,0
-Boyer S. Robert,unknown,0
+Atta ur Rehman Khan,University of Malaya COMSATS University,0
+Scott Aaronson,Cornell University University of California Berkeley,4
+Rediet Abebe,Cornell University University of Cambridge Harvard University,0
+Hal Abelson,Princeton University Massachusetts Institute of Technology,1
+Serge Abiteboul,University of Southern California,7
+Samson Abramsky,King's College Cambridge Queen Mary University of London,5
+Leonard Adleman,University of California Berkeley,1
+Manindra Agrawal,Indian Institute of Technology Kanpur,8
+Luis von Ahn,Duke University BS Carnegie Mellon University,4
+Alfred Aho,University of Toronto Princeton University,5
+Frances E. Allen,University at Albany University of Michigan,7
+Gene Amdahl,South Dakota State University BS University of Wisconsin MS PhD,3
+David P. Anderson,Wesleyan University University of Wisconsin-Madison,1
+Cecilia R. Aragon,California Institute of Technology University of California Berkeley,1
+Angie Jones,Tennessee State University North Carolina State University ,0
+Sanjeev Arora,SB Massachusetts Institute of Technology PhD UC Berkeley,0
+Winifred Asprey,Vassar College University of Iowa,0
+John Vincent Atanasoff,University of Florida Iowa State University University of Wisconsin–Madison,1
+Charles Babbage,Peterhouse Cambridge,1
+Charles Bachman,University of Pennsylvania Michigan State University,3
+John Backus,University of Virginia University of Pittsburgh Haverford College Columbia University,3
+David F. Bacon,U.C. Berkeley,1
+David Bader (computer scientist),Lehigh University University of Maryland College Park,11
+Victor Bahl,University of Massachusetts Amherst Modern School New Delhi,0
+Anthony James Barr,North Carolina State University,0
+Jean Bartik,Northwest Missouri State Teachers College University of Pennsylvania,2
+Andrew Barto,University of Michigan,2
+Rudolf Bayer,University of Illinois at Urbana–Champaign,2
+Gordon Bell,MIT,3
+Daniel J. Bernstein,University of California Berkeley New York University,0
+Abhay Bhushan,Indian Institute of Technology Kanpur Massachusetts Institute of Technology MIT Sloan School of Management,0
+Dines Bj%C3%B8rner,Technical University of Denmark,2
+Sue Black (computer scientist),London South Bank University,0
+David Blei,Brown University University of California Berkeley,2
+Dorothy Blum,Brooklyn College,0
+Lenore Blum,Simmons College Massachusetts Institute of Technology,4
+Manuel Blum,Massachusetts Institute of Technology BA MA PhD,1
+Corrado B%C3%B6hm,ETH Zürich,0
+Andrew Donald Booth,Jesus College,0
+Anita Borg,New York University,0
+Jonathan Bowen,University College Oxford,2
+Karlheinz Brandenburg,University of Erlangen-Nuremberg,1
+Per Brinch Hansen,Technical University of Denmark,1
+Fred Brooks,Duke University Harvard University,5
+Rod Brooks,Stanford University Flinders University,1
+Michael Butler (computer scientist),Trinity College Dublin Wolfson College Oxford,0
+Tracy Camp,The College of William and Mary Michigan State University Kalamazoo College,1
+Martin Campbell-Kelly,Sunderland Polytechnic,0
+Rosemary Candlin,University of Cambridge,0
+Luca Cardelli,University of Pisa University of Edinburgh,3
+Edwin Catmull,University of Utah,4
+Vint Cerf,Stanford University BS University of California Los Angeles MS PhD,13
+Robert Cailliau,Ghent University University of Michigan,0
+Peter Chen,National Taiwan University Harvard University,4
+Tracy Chou,Stanford University [1] B.S. M.S.,0
+Alonzo Church,Princeton University BS PhD,0
+Edmund M. Clarke,Cornell University,1
+John Cocke (computer scientist),Duke University,6
+Edgar F. Codd,Exeter College Oxford University of Michigan,2
+Simon Colton,Durham University University of Liverpool University of Edinburgh,0
+Stephen Cook,Harvard University University of Michigan,9
+Fernando J. Corbat%C3%B3,California Institute of Technology Massachusetts Institute of Technology,3
+Patrick Cousot,École Nationale Supérieure des Mines de Nancy,10
+Ingemar Cox,University College London Oxford University,0
+Seymour Cray,University of Minnesota,0
+Nello Cristianini,University of Trieste University of London University of Bristol,2
+Jon Crowcroft,University of Cambridge University College London,2
+Glen Culler,University of California Berkeley University of California Los Angeles,3
+Haskell Curry,Harvard University University of Göttingen,0
+Luigi Dadda,Politecnico di Milano,0
+Ole-Johan Dahl,University of Oslo,2
+Samir Das,Georgia Tech Indian Institute of Science Jadavpur University,0
+Neil Daswani,Stanford University Columbia University,0
+Christopher J. Date,University of Cambridge,0
+Jeff Dean,University of Minnesota University of Washington,0
+Erik Demaine,Dalhousie University University of Waterloo,3
+Tom DeMarco,Cornell University Columbia University University of Paris,1
+Richard DeMillo,University of St. Thomas Georgia Institute of Technology,0
+Dorothy E. Denning,University of Michigan Purdue University,2
+Peter J. Denning,Massachusetts Institute of Technology [1] Manhattan College,2
+Vinod Dham,Delhi College of Engineering Delhi Technological University Delhi University University of Cincinnati,0
+Whitfield Diffie,Massachusetts Institute of Technology,8
+Matthew Dillon,University of California Berkeley,0
+Jack Dongarra,Chicago State University BS Illinois Institute of Technology MS University of New Mexico PhD,15
+Charles Stark Draper,Massachusetts Institute of Technology Stanford University,6
+Susan Dumais,Indiana University Bates College,0
+Jon Michael Dunn,Oberlin College University of Pittsburgh,0
+Annie Easley,Cleveland State University,0
+John Presper Eckert,University of Pennsylvania,5
+Alan Edelman,MIT Yale University,3
+Brendan Eich,University of Illinois Urbana-Champaign Santa Clara University,0
+Philip Emeagwali,George Washington University School of Engineering and Applied Science Oregon State University,0
+Douglas Engelbart,Oregon State University University of California Berkeley,9
+Barbara Engelhardt,Stanford University University of California Berkeley,1
+David Eppstein,Stanford University Columbia University,0
+Andrey Ershov,Moscow State University,0
+Philip Don Estridge,University of Florida,0
+Oren Etzioni,Harvard University Carnegie Mellon University,1
+Christopher Riche Evans,University College London University of Reading,0
+Shimon Even,Harvard University,0
+Edward Feigenbaum,Carnegie Mellon University,5
+Tim Finin,University of Illinois,2
+Donald Firesmith,Arizona State University,0
+Sally Floyd,University of California Berkeley,0
+James D. Foley,University of Michigan Lehigh University,6
+Lance Fortnow,Cornell University Massachusetts Institute of Technology,4
+Mahmoud Samir Fayed,Menoufia University King Saud University,0
+Robert France,University of the West Indies Trinidad and Tobago Massey University New Zealand,1
+Edward Fredkin,California Institute of Technology,1
+Yoav Freund,The Hebrew University of Jerusalem University of California Santa Cruz,1
+Daniel P. Friedman,University of Houston [1],0
+Charlotte Froese Fischer,University of British Columbia University of Cambridge,7
+Ping Fu,University of California San Diego,0
+Kunihiko Fukushima,Kyoto University,0
+D. R. Fulkerson,Southern Illinois University University of Wisconsin–Madison,3
+Zvi Galil,Tel Aviv University BSc MSc Cornell University PhD,3
+Michael Garey,University of Wisconsin–Madison,0
+David Gelernter,Yale University BA State University of New York at Stony Brook PhD,1
+Lisa Gelobter,Brown University,0
+Zoubin Ghahramani,University of Pennsylvania Massachusetts Institute of Technology,2
+Juan E. Gilbert,Miami University University of Cincinnati,0
+Lee Giles,Rhodes College University of Tennessee University of Michigan University of Arizona,7
+Seymour Ginsburg,City College of New York University of Michigan,0
+Kurt G%C3%B6del,University of Vienna PhD,4
+Ashok Goel,Ohio State University,2
+Joseph Goguen,Harvard University University of California Berkeley,0
+Adele Goldberg (computer scientist),University of Michigan University of Chicago,0
+Andrew V. Goldberg,Massachusetts Institute of Technology University of California Berkeley,1
+Ian Goldberg,University of California Berkeley University of Waterloo,0
+Oded Goldreich,Technion Weizmann Institute,1
+Shafi Goldwasser,Carnegie Mellon University University of California Berkeley,13
+Gene Golub,University of Illinois at Urbana-Champaign,0
+Gast%C3%B3n Gonnet,University of Waterloo,0
+Ian Goodfellow,Stanford University Université de Montréal,0
+James Gosling,University of Calgary BSc Carnegie Mellon University MA PhD,2
+Paul Graham (computer programmer),Cornell University Harvard University,0
+Susan L. Graham,Harvard Stanford,5
+Jim Gray (computer scientist),University of California Berkeley,3
+Sheila Greibach,Radcliffe College Harvard University,0
+Bill Gropp,Stanford University,2
+Ramanathan V. Guha,Indian Institute of Technology Madras University of California Berkeley Stanford University,0
+Neil J. Gunther,La Trobe University University of Southampton,0
+Wendy Hall,University of Southampton City University London [5],1
+Richard Hamming,University of Chicago University of Nebraska University of Illinois at Urbana–Champaign,4
+Jiawei Han,University of Wisconsin - Madison PhD University of Science and Technology of China BSc.,0
+Frank Harary,Brooklyn College University of California Berkeley,0
+Juris Hartmanis,University of Marburg University of Kansas City Caltech,1
+Johan H%C3%A5stad,Massachusetts Institute of Technology Uppsala University Stockholm University,4
+Les Hatton,King's College Cambridge,1
+He Jifeng,Fudan University,0
+Martin Hellman,New York University Stanford University,10
