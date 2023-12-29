@@ -3,6 +3,9 @@ from bs4 import BeautifulSoup
 import csv
 import re
 
+with open('data.csv', 'a', newline='\n', encoding="utf-8") as csv_file:
+    csv_writer = csv.writer(csv_file)
+    csv_writer.writerow(["SURNAME", "EDUCATION", "AWARDS"])
 # URL of the Wikipedia article
 url = "https://en.wikipedia.org/wiki/List_of_computer_scientists"
 
@@ -35,7 +38,8 @@ if response.status_code == 200:
             infobox_table = scientist_soup.find('table', {'class': 'infobox biography vcard'})
 
             if infobox_table:
-                name = link.split("/")[-1].replace("_", " ")
+                name_old = link.split("/")[-1].replace("_", " ")
+                name = " ".join(reversed(name_old.split()))
                 alma_mater = []
                 awards = None
 
