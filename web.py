@@ -5,7 +5,7 @@ import re
 
 with open('data.csv', 'w', newline='\n', encoding="utf-8") as csv_file:
     csv_writer = csv.writer(csv_file)
-    csv_writer.writerow(["SURNAME", "EDUCATION", "AWARDS"])
+    csv_writer.writerow(["NAME", "EDUCATION", "AWARDS"])
 # URL of the Wikipedia article
 url = "https://en.wikipedia.org/wiki/List_of_computer_scientists"
 
@@ -51,7 +51,7 @@ if response.status_code == 200:
                         data_text = data.get_text(strip=True)
 
                         if re.search(r"Alma\s*?mater", header_text, re.I):  # Match "Alma mater" with optional spaces ???? -> ερώτηση για τερματισμό / πότε να γίνει
-                            alma_mater_values = [almamater.get_text(strip=True) for almamater in data.find_all('a')]
+                            alma_mater_values = [almamater.get_text(strip=True) for almamater in data.find_all('a')] # get rid of some parenthesis later fi: (BA, MA, PHD)
                             alma_mater.extend(alma_mater_values)
 
                         elif header_text == "Awards":
@@ -61,8 +61,7 @@ if response.status_code == 200:
                     awards = 0
                 if not alma_mater:
                     continue
-                alma_mater_str = ' '.join([value.replace(',', '') for value in alma_mater])
-                print(name, alma_mater_str)
+                alma_mater_str = '@'.join([value.replace(', ', ' ') for value in alma_mater])
                 with open('data.csv', 'a', newline='\n', encoding="utf-8") as csv_file:
                     csv_writer = csv.writer(csv_file)
                     csv_writer.writerow([name, alma_mater_str, awards])                

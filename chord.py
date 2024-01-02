@@ -5,6 +5,7 @@ import holoviews as hv
 from holoviews import opts, dim
 hv.extension('bokeh')
 import pandas as pd
+import hashing
 
 
 K = 4
@@ -20,13 +21,14 @@ class Node:
 
     def updateFingerTable(self):
         self.fingerTable[1:] = []
-        for i in range(1, K): #start from 1, we do not delete 0
+        for i in range(1, K): #start from 1, we do not delete 0, which is the next one
             self.fingerTable.append(self.lookupNode(self.id + 2 ** i))
 
 
     def getHashId(self, key):
         return key % SIZE
     
+
 
     # in a circle from id1 to id2
     def distance(self, id1, id2):
@@ -36,17 +38,14 @@ class Node:
             return SIZE - id1 + id2
 
 
-    def lookupNode(self, node_id, jumps=0):
+    def lookupNode(self, node_id):
         hashId = self.getHashId(node_id)
 
         if (self.id == hashId):
-            # print("Jumps: ", jumps)
             return self
         
         # between current node and its successor, successor is returned
         if self.distance(self.id, hashId) <= self.distance(self.fingerTable[0].id, hashId):
-            jumps += 1
-            # print("Jumps: ", jumps) 
             return self.fingerTable[0]
         
         # iterate through the fingerTable and find the closest node that is __before__ the wanted
@@ -55,8 +54,7 @@ class Node:
         for i in range(len(self.fingerTable) -1):
             if (self.distance(self.fingerTable[i].id, hashId) < self.distance(nextNode.id, hashId)):
                 nextNode = self.fingerTable[i]
-        jumps += 1
-        return nextNode.lookupNode(hashId, jumps)
+        return nextNode.lookupNode(hashId)
 
     
     def join(self, newNode): 
@@ -66,7 +64,6 @@ class Node:
             # First node is being inserted
             self.prev = newNode
             self.fingerTable.append(newNode)
-
 
             # updated by stabilization
             self.updateFingerTable()
@@ -82,18 +79,47 @@ class Node:
             newNode.prev = afterNode.prev
             afterNode.prev = newNode
             newNode.fingerTable.append(afterNode)
+            to_delete = []
 
             # transfer suitable data to newNode and delete them from afterNode
-            # for key in afterNode.data.keys():
-            #     hashId = self.getHashId(key)
-            #     if (self.distance(hashId, newNode.ID) < self.distance(hashId, afterNode.ID)):
-            #         newNode.data[key] = afterNode.data[key]
-            #         del afterNode.data[key]
-                    
-            # being updated by stabilization
+            for key, value in afterNode.data.items():
+                hashId = hashing.hashed(key) % SIZE
+                if (self.distance(hashId, newNode.id) < self.distance(hashId, afterNode.id)):
+                    newNode.data[key] = afterNode.data[key]
+                    # mark which entries are to be deleted since transfered
+                    to_delete.append(key)
+            # delete them
+            for key in to_delete:
+                del afterNode.data[key]
+            
+            # being updated by stabilization ??? enas elegxos edw
             newNode.updateFingerTable()
             newNode.stabilization()
 
+
+    def insert_data(self, row):
+        name, universities, awards = row.split(",")
+        # find corresponding chord node
+        education = universities.split("@") # it's a list
+        for edu in education:
+            hashed_key = hashing.hashed(edu)
+            node_home = self.lookupNode(hashed_key)
+
+            if edu not in node_home.data.keys():
+                node_home.data[edu] = {name: awards}
+            
+            else:
+                node_home.data[edu][name] = awards
+
+    def search_query(self, education_string, awards):
+        hashed_education = hashing.hashed(education_string) % SIZE
+        result_list = []
+        search_node = self.lookupNode(hashed_education)
+        print(search_node.id)
+        if education_string in search_node.data.keys():
+            result_list.append(search_node.data[education_string])
+
+        return result_list
 
     def ins_stabilization(self, startnode):
         self.updateFingerTable()
@@ -113,8 +139,7 @@ class Node:
 
     def delete(self):
         if (self.prev == self and self.fingerTable[0] == self):
-            # only node in chord
-            # clean its data
+            self.data.clear()
             pass
         else:
             extra_node = self.prev
@@ -123,9 +148,9 @@ class Node:
 
 
             # transfer the data to the next node
-            # for key, value in self.data.items():
-            #     self.fingerTable[0].data[key] = value
-
+            for key, value in self.data.items():
+                self.fingerTable[0].data[key] = value
+            self.data.clear()
 
             # they are being updated by stabilization anyway
             self.prev.updateFingerTable()
