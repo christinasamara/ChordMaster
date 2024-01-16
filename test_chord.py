@@ -27,8 +27,11 @@ nodes[0].visualize_chord_ring()
 nodes[0].delete()
 nodes[1].visualize_chord_ring()
 
-for node in nodes:
-    print(len(node.data), end=" ")
-print()
+# for node in nodes:
+#     print(len(node.data), end=" ")
+# print()
 
-print(nodes[1].search_query("Massachusetts Institute of Technology", 0))
+# print(nodes[1].search_education("Massachusetts Institute of Technology", 0))
+
+results, v= nodes[1].search_scientist("Rehman")
+print(results, v)

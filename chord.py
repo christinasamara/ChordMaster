@@ -99,6 +99,7 @@ class Node:
 
     def insert_data(self, row):
         name, universities, awards = row.split(",")
+
         # find corresponding chord node
         education = universities.split("@") # it's a list
         for edu in education:
@@ -111,7 +112,7 @@ class Node:
             else:
                 node_home.data[edu][name] = awards
 
-    def search_query(self, education_string, awards):
+    def search_education(self, education_string, awards):
         hashed_education = hashing.hashed(education_string) % SIZE
         result_list = []
         search_node = self.lookupNode(hashed_education)
@@ -120,6 +121,49 @@ class Node:
             result_list.append(search_node.data[education_string])
 
         return result_list
+    
+    #def search_scientist(self, scientist_surname, scientist_name=None):
+    #    print(self.id)
+    #    searched_nodes = [self.id]
+    #    result_list = []
+    #    if scientist_surname in self.data.values():
+    #        result_list.append(scientist_surname)
+    #    
+    #    current_node = self
+    #
+    #    for node in current_node.fingerTable:
+    #        results, searches = node._search_scientist(scientist_surname, result_list, searched_nodes)
+    #        print(results)
+    #        searched_nodes.extend(searches)
+    #    return result_list
+
+    def search_scientist(self, scientist_surname, scientist_name=None):
+        result_list = []
+
+        # Search in the current node
+        for key, value in self.data.items():
+            for key2 in value.keys():
+                if scientist_surname in value.keys(): # and (scientist_name is None or scientist_name == value.get('name', '')):
+                    result_list.append(key)
+
+        # Search in the finger table nodes
+        current_node = self.fingerTable[0]
+        visited_nodes = set()
+        visited_nodes.add(self.id)
+        while current_node != self and current_node.id not in visited_nodes:
+            visited_nodes.add(current_node.id)
+
+            for key, value in current_node.data.items():
+                for key2 in value.keys():
+                    if scientist_surname in key2: # and (scientist_name is None or scientist_name == value.get('name', '')):
+                        result_list.append(key)
+
+            # Move to the next node in the finger table
+            current_node = current_node.fingerTable[0] if current_node.fingerTable else self
+
+        return result_list, visited_nodes
+
+
 
     def ins_stabilization(self, startnode):
         self.updateFingerTable()
