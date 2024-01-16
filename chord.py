@@ -122,20 +122,6 @@ class Node:
 
         return result_list
     
-    #def search_scientist(self, scientist_surname, scientist_name=None):
-    #    print(self.id)
-    #    searched_nodes = [self.id]
-    #    result_list = []
-    #    if scientist_surname in self.data.values():
-    #        result_list.append(scientist_surname)
-    #    
-    #    current_node = self
-    #
-    #    for node in current_node.fingerTable:
-    #        results, searches = node._search_scientist(scientist_surname, result_list, searched_nodes)
-    #        print(results)
-    #        searched_nodes.extend(searches)
-    #    return result_list
 
     def search_scientist(self, scientist_surname, scientist_name=None):
         result_list = []
@@ -163,13 +149,6 @@ class Node:
 
         return result_list, visited_nodes
 
-
-
-    def ins_stabilization(self, startnode):
-        self.updateFingerTable()
-        next_node = self.fingerTable[0]
-        if next_node != startnode:
-            next_node.ins_stabilization(startnode)  # Recursive call using the method of the current node
 
     def stabilization(self):
         self.updateFingerTable()
