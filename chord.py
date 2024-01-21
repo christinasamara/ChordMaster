@@ -8,7 +8,7 @@ import pandas as pd
 import hashing
 
 
-K = 4
+K = 5
 SIZE = 2 ** K
 
 class Node:
@@ -195,27 +195,6 @@ class Node:
             self.prev.stabilization()
 
 
-    def visualize_chord(self):
-        G = nx.DiGraph()
-
-        current_node = self
-        start_node = self
-
-        while True:
-            G.add_node(current_node.id)
-        
-            # Draw other finger table connections
-            for finger_node in current_node.fingerTable:
-                G.add_edge(current_node.id, finger_node.id)
-        
-            current_node = current_node.fingerTable[0]
-            if current_node == start_node:
-                break
-
-        pos = nx.circular_layout(G)
-        nx.draw(G, pos, with_labels=True, arrowsize=20, node_size=700, node_color="skyblue", font_size=8)
-        plt.title("Chord Ring Visualization")
-        plt.show()
 
     def visualize_chord_ring(self):
         links = []
