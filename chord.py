@@ -116,23 +116,23 @@ class Node:
         hashed_education = hashing.hashed(education_string) % SIZE
         result_list = []
         search_node = self.lookupNode(hashed_education)
-        if education_string in search_node.data.keys():
-            for value in search_node.data.values():
-                for name, n_awards in value.items():
+        for university in search_node.data.keys():
+            if education_string in university:
+                for name, n_awards in search_node.data[university].items():
                     if int(n_awards) >= awards:
                         result_list.append(name)
-            
 
         return result_list
     
 
     def search_scientist(self, scientist_surname, scientist_name=None):
         result_list = []
+        results = {}
 
         # Search in the current node
         for key, value in self.data.items():
             for key2 in value.keys():
-                if scientist_surname in value.keys(): # and (scientist_name is None or scientist_name == value.get('name', '')):
+                if scientist_surname in key2 and (scientist_name == None or scientist_name in key2): # and (scientist_name is None or scientist_name == value.get('name', '')):
                     result_list.append(key)
 
         # Search in the finger table nodes
@@ -143,14 +143,18 @@ class Node:
             visited_nodes.add(current_node.id)
 
             for key, value in current_node.data.items():
-                for key2 in value.keys():
+                for key2, value2 in value.items():
                     if scientist_surname in key2: # and (scientist_name is None or scientist_name == value.get('name', '')):
-                        result_list.append(key)
+                        if key2 not in results:
+                            results[key2] = {"alma mater": [key], "awards": value2}
+                        else:
+                            results[key2]["alma mater"].append(key)
+                        
 
             # Move to the next node in the finger table
             current_node = current_node.fingerTable[0] if current_node.fingerTable else self
 
-        return result_list, visited_nodes
+        return results
 
 
     def stabilization(self):

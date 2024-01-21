@@ -65,8 +65,8 @@ nodes[0].visualize_chord_ring()
 #     print(len(node.data), end=" ")
 # print()
 
-result = nodes[1].search_education("Massachusetts Institute of Technology", 5)
-print(result)
+# result = nodes[1].search_education("Massachusetts Institute of Technology", 0)
+# print(result)
 # 
-# results, v= nodes[1].search_scientist("Rehman")
-# print(results, v)
+results, v= nodes[1].search_scientist("Amdahl")
+print(results, v)
