@@ -4,11 +4,14 @@ import pandas as pd
 import csv
 import time
 from timeit import default_timer as timer
-K = 5
+import statistics
+
+K = 4
 SIZE = 2 ** K
 
 join_times = []
 delete_times = []
+lookup_times = []
 
 nodes = [Node(i) for i in range(SIZE)]
 start = timer()
@@ -35,21 +38,35 @@ for i in range(1, SIZE):
 
 nodes[0].visualize_chord_ring()
 
-for i in range(0, SIZE):
-    start = timer()
-    nodes[i].delete()
-    end = timer()
-    delete_times.append(end-start)
+# for i in range(0, SIZE):
+#     for j in range(0, SIZE):
+#         start = timer()
+#         nodes[i].lookupNode(j)
+#         end = timer()
+#         lookup_times.append(end-start)
 
-print("join_times", join_times)
-print("delete_times", delete_times)
 
+# for i in range(0, SIZE):
+#     start = timer()
+#     nodes[i].delete()
+#     end = timer()
+#     delete_times.append(end-start)
+
+
+
+
+
+
+# print("join_times", join_times)
+# print("delete_times", delete_times)
+# print("lookup_times", statistics.mean(lookup_times))
 
 # for node in nodes:
 #     print(len(node.data), end=" ")
 # print()
 
-# print(nodes[1].search_education("Massachusetts Institute of Technology", 0))
+result = nodes[1].search_education("Massachusetts Institute of Technology", 5)
+print(result)
 # 
 # results, v= nodes[1].search_scientist("Rehman")
 # print(results, v)

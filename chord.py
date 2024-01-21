@@ -8,7 +8,7 @@ import pandas as pd
 import hashing
 
 
-K = 5
+K = 4
 SIZE = 2 ** K
 
 class Node:
@@ -116,9 +116,12 @@ class Node:
         hashed_education = hashing.hashed(education_string) % SIZE
         result_list = []
         search_node = self.lookupNode(hashed_education)
-        print(search_node.id)
         if education_string in search_node.data.keys():
-            result_list.append(search_node.data[education_string])
+            for value in search_node.data.values():
+                for name, n_awards in value.items():
+                    if int(n_awards) >= awards:
+                        result_list.append(name)
+            
 
         return result_list
     
