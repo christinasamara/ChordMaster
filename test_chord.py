@@ -68,5 +68,11 @@ nodes[0].visualize_chord_ring()
 # result = nodes[1].search_education("Massachusetts Institute of Technology", 0)
 # print(result)
 # 
-results, v= nodes[1].search_scientist("Amdahl")
-print(results, v)
+
+
+results= nodes[1].search_scientist("Blum")
+for scientist in results:
+    print("Name: ", scientist)
+    print("Alma Mater: ", results[scientist]["alma mater"])
+    print("Awards: ", results[scientist]["awards"])
+    print()
