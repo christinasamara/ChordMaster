@@ -50,8 +50,8 @@ if response.status_code == 200:
                         header_text = header.get_text(strip=True)
                         data_text = data.get_text(strip=True)
 
-                        if re.search(r"Alma\s*?mater", header_text, re.I):  # Match "Alma mater" with optional spaces ???? -> ερώτηση για τερματισμό / πότε να γίνει
-                            alma_mater_values = [almamater.get_text(strip=True) for almamater in data.find_all('a')] # get rid of some parenthesis later fi: (BA, MA, PHD)
+                        if re.search(r"Alma\s*?mater", header_text, re.I):  # Match "Alma mater" with optional spaces ???? -> ερωτηση2
+                            alma_mater_values = [almamater.get_text(strip=True) for almamater in data.find_all('a')] # get rid of: (BA, MA, PhD)
                             alma_mater.extend(alma_mater_values)
 
                         elif header_text == "Awards":
@@ -69,6 +69,5 @@ else:
     print(f"Failed to retrieve the webpage. Status code: {response.status_code}")
 
 # to be solved
-# -> if alma_mater unknown, pass
 # -> some names have (computer scientist) next to them
-# -> web crawler reaching end
+# -> only latin characters
