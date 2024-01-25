@@ -1,4 +1,3 @@
-NAME,EDUCATION,AWARDS
 Atta ur Rehman Khan,University of Malaya@COMSATS University,0
 Scott Aaronson,Cornell University@University of California Berkeley,4
 Rediet Abebe,Cornell University@University of Cambridge@Harvard University,0
@@ -7,21 +6,20 @@ Serge Abiteboul,University of Southern California,7
 Samson Abramsky,King's College Cambridge@Queen Mary University of London,5
 Leonard Adleman,University of California Berkeley,1
 Manindra Agrawal,Indian Institute of Technology Kanpur,8
-Luis von Ahn,Duke University@BS@Carnegie Mellon University,4
 Alfred Aho,University of Toronto@Princeton University,5
 Frances E. Allen,University at Albany@University of Michigan,7
-Gene Amdahl,South Dakota State University@BS@University of Wisconsin@MS@PhD,3
+Gene Amdahl,South Dakota State University@University of Wisconsin,3
 David P. Anderson,Wesleyan University@University of Wisconsin-Madison,1
 Cecilia R. Aragon,California Institute of Technology@University of California Berkeley,1
 Angie Jones,Tennessee State University@North Carolina State University@,0
-Sanjeev Arora,SB@Massachusetts Institute of Technology@PhD@UC Berkeley,0
+Sanjeev Arora,SB@Massachusetts Institute of Technology@UC Berkeley,0
 Winifred Asprey,Vassar College@University of Iowa,0
 John Vincent Atanasoff,University of Florida@Iowa State University@University of Wisconsin–Madison,1
 Charles Babbage,Peterhouse Cambridge,1
 Charles Bachman,University of Pennsylvania@Michigan State University,3
 John Backus,University of Virginia@University of Pittsburgh@Haverford College@Columbia University,3
 David F. Bacon,U.C. Berkeley,1
-David Bader (computer scientist),Lehigh University@University of Maryland College Park,11
+David Bader,Lehigh University@University of Maryland College Park,11
 Victor Bahl,University of Massachusetts Amherst@Modern School New Delhi,0
 Anthony James Barr,North Carolina State University,0
 Jean Bartik,Northwest Missouri State Teachers College@University of Pennsylvania,2
@@ -30,13 +28,13 @@ Rudolf Bayer,University of Illinois at Urbana–Champaign,2
 Gordon Bell,MIT,3
 Daniel J. Bernstein,University of California Berkeley@New York University,0
 Abhay Bhushan,Indian Institute of Technology Kanpur@Massachusetts Institute of Technology@MIT Sloan School of Management,0
-Dines Bj%C3%B8rner,Technical University of Denmark,4
-Sue Black (computer scientist),London South Bank University,0
+Dines Bjørner,Technical University of Denmark,4
+Sue Black,London South Bank University,0
 David Blei,Brown University@University of California Berkeley,2
 Dorothy Blum,Brooklyn College,0
 Lenore Blum,Simmons College@Massachusetts Institute of Technology,4
-Manuel Blum,Massachusetts Institute of Technology@BA@MA@PhD,1
-Corrado B%C3%B6hm,ETH Zürich,0
+Manuel Blum,Massachusetts Institute of Technology,1
+Corrado Böhm,ETH Zürich,0
 Andrew Donald Booth,Jesus College,0
 Anita Borg,New York University,0
 Jonathan Bowen,University College@Oxford,2
@@ -44,23 +42,23 @@ Karlheinz Brandenburg,University of Erlangen-Nuremberg,1
 Per Brinch Hansen,Technical University of Denmark,1
 Fred Brooks,Duke University@Harvard University,5
 Rod Brooks,Stanford University@Flinders University,1
-Michael Butler (computer scientist),Trinity College Dublin@Wolfson College@Oxford,0
+Michael Butler,Trinity College Dublin@Wolfson College@Oxford,0
 Tracy Camp,The College of William and Mary@Michigan State University@Kalamazoo College,1
 Martin Campbell-Kelly,Sunderland Polytechnic,0
 Rosemary Candlin,University of Cambridge,0
 Luca Cardelli,University of Pisa@University of Edinburgh,3
 Edwin Catmull,University of Utah,4
-Vint Cerf,Stanford University@BS@University of California Los Angeles@MS@PhD,13
+Vint Cerf,Stanford University@University of California Los Angeles,13
 Robert Cailliau,Ghent University@University of Michigan,0
 Peter Chen,National Taiwan University@Harvard University,4
-Tracy Chou,Stanford University@[1]@B.S.@M.S.,0
-Alonzo Church,Princeton University@BS@PhD,0
+Tracy Chou,Stanford University,0
+Alonzo Church,Princeton University,0
 Edmund M. Clarke,Cornell University,1
-John Cocke (computer scientist),Duke University,6
+John Cocke,Duke University,6
 Edgar F. Codd,Exeter College Oxford@University of Michigan,2
 Simon Colton,Durham University@University of Liverpool@University of Edinburgh,0
 Stephen Cook,Harvard University@University of Michigan,9
-Fernando J. Corbat%C3%B3,California Institute of Technology@Massachusetts Institute of Technology,3
+Fernando J. Corbató,California Institute of Technology@Massachusetts Institute of Technology,3
 Patrick Cousot,École Nationale Supérieure des Mines de Nancy,10
 Ingemar Cox,University College London@Oxford University,0
 Seymour Cray,University of Minnesota,0
@@ -78,11 +76,11 @@ Erik Demaine,Dalhousie University@University of Waterloo,3
 Tom DeMarco,Cornell University@Columbia University@University of Paris,1
 Richard DeMillo,University of St. Thomas@Georgia Institute of Technology,0
 Dorothy E. Denning,University of Michigan@Purdue University,2
-Peter J. Denning,Massachusetts Institute of Technology@[1]@Manhattan College,2
+Peter J. Denning,Massachusetts Institute of Technology@Manhattan College,2
 Vinod Dham,Delhi College of Engineering@Delhi Technological University@Delhi University@University of Cincinnati,0
 Whitfield Diffie,Massachusetts Institute of Technology,8
 Matthew Dillon,University of California Berkeley,0
-Jack Dongarra,Chicago State University@BS@Illinois Institute of Technology@MS@University of New Mexico@PhD,15
+Jack Dongarra,Chicago State University@Illinois Institute of Technology@University of New Mexico,15
 Charles Stark Draper,Massachusetts Institute of Technology@Stanford University,6
 Susan Dumais,Indiana University@Bates College,0
 Jon Michael Dunn,Oberlin College@University of Pittsburgh,0
@@ -109,44 +107,44 @@ Mahmoud Samir Fayed,Menoufia University@King Saud University,0
 Robert France,University of the West Indies@Trinidad and Tobago@Massey University@New Zealand,1
 Edward Fredkin,California Institute of Technology,1
 Yoav Freund,The Hebrew University of Jerusalem@University of California Santa Cruz,1
-Daniel P. Friedman,University of Houston@[1],0
+Daniel P. Friedman,University of Houston,0
 Charlotte Froese Fischer,University of British Columbia@University of Cambridge,7
 Ping Fu,University of California San Diego,0
 Kunihiko Fukushima,Kyoto University,0
 D. R. Fulkerson,Southern Illinois University@University of Wisconsin–Madison,3
-Zvi Galil,Tel Aviv University@BSc@MSc@Cornell University@PhD,3
+Zvi Galil,Tel Aviv University@Cornell University,3
 Michael Garey,University of Wisconsin–Madison,0
-David Gelernter,Yale University@BA@State University of New York at Stony Brook@PhD,1
+David Gelernter,Yale University@State University of New York at Stony Brook,1
 Lisa Gelobter,Brown University,0
 Zoubin Ghahramani,University of Pennsylvania@Massachusetts Institute of Technology,2
 Juan E. Gilbert,Miami University@University of Cincinnati,0
 Lee Giles,Rhodes College@University of Tennessee@University of Michigan@University of Arizona,7
 Seymour Ginsburg,City College of New York@University of Michigan,0
-Kurt G%C3%B6del,University of Vienna@PhD,4
+Kurt Gödel,University of Vienna,4
 Ashok Goel,Ohio State University,2
 Joseph Goguen,Harvard University@University of California Berkeley,0
-Adele Goldberg (computer scientist),University of Michigan@University of Chicago,0
+Adele Goldberg,University of Michigan@University of Chicago,0
 Andrew V. Goldberg,Massachusetts Institute of Technology@University of California Berkeley,1
 Ian Goldberg,University of California Berkeley@University of Waterloo,0
 Oded Goldreich,Technion@Weizmann Institute,1
 Shafi Goldwasser,Carnegie Mellon University@University of California Berkeley,13
 Gene Golub,University of Illinois at Urbana-Champaign,0
-Gast%C3%B3n Gonnet,University of Waterloo,0
+Gastón Gonnet,University of Waterloo,0
 Ian Goodfellow,Stanford University@Université de Montréal,0
-James Gosling,University of Calgary@BSc@Carnegie Mellon University@MA@PhD,2
-Paul Graham (computer programmer),Cornell University@Harvard University,0
+James Gosling,University of Calgary@Carnegie Mellon University,2
+Paul Graham,Cornell University@Harvard University,0
 Susan L. Graham,Harvard@Stanford,5
-Jim Gray (computer scientist),University of California Berkeley,3
+Jim Gray,University of California Berkeley,3
 Sheila Greibach,Radcliffe College@Harvard University,0
 Bill Gropp,Stanford University,2
 Ramanathan V. Guha,Indian Institute of Technology Madras@University of California Berkeley@Stanford University,0
 Neil J. Gunther,La Trobe University@University of Southampton,0
 Wendy Hall,University of Southampton@City University London@[5],1
 Richard Hamming,University of Chicago@University of Nebraska@University of Illinois at Urbana–Champaign,4
-Jiawei Han,University of Wisconsin - Madison@PhD@University of Science and Technology of China@BSc.,0
+Jiawei Han,University of Wisconsin - Madison@University of Science and Technology of China@BSc.,0
 Frank Harary,Brooklyn College@University of California Berkeley,0
 Juris Hartmanis,University of Marburg@University of Kansas City@Caltech,1
-Johan H%C3%A5stad,Massachusetts Institute of Technology@Uppsala University@Stockholm University,4
+Johan Håstad,Massachusetts Institute of Technology@Uppsala University@Stockholm University,4
 Les Hatton,King's College Cambridge,1
 He Jifeng,Fudan University,0
 Martin Hellman,New York University@Stanford University,10
@@ -157,22 +155,22 @@ Julia Hirschberg,University of Pennsylvania@University of Michigan,9
 John Henry Holland,University of Michigan,2
 Gerard Holzmann,Delft University of Technology,1
 John Hopcroft,Seattle University@Stanford University,8
-Grace Hopper,Vassar College@BA@Yale University@MS@PhD,10
+Grace Hopper,Vassar College@Yale University,10
 Alston Householder,University of Chicago,0
 David A. Huffman,Ohio State University@Massachusetts Institute of Technology,1
 Mary Jane Irwin,University of Illinois at Urbana-Champaign@Memphis State University,3
 Kenneth E. Iverson,Queen's University@Harvard University,4
 Ivar Jacobson,Chalmers Institute of Technology@Gothenburg@Royal Institute of Technology@Stockholm,0
-Anil K. Jain (computer scientist born 1948),Indian Institute of Technology Kanpur@Ohio State University,12
+Anil K. Jain,Indian Institute of Technology Kanpur@Ohio State University,12
 Ramesh Jain,Indian Institute of Technology Kharagpur@Visvesvaraya National Institute of Technology Nagpur,0
 David S. Johnson,Amherst College@MIT,2
 Stephen C. Johnson,Columbia University@Haverford College,0
-Cliff Jones (computer scientist),University of Oxford,0
+Cliff Jones,University of Oxford,0
 Michael I. Jordan,University of California San Diego,8
 Mathai Joseph,Wilson College Mumbai@University of Bombay@Welsh College of Advanced Technology@University of Cambridge,1
 Aravind K. Joshi,College of Engineering Pune@Indian Institute of Science@University of Pennsylvania,0
 Bill Joy,University of Michigan@University of California Berkeley,4
-Dan Jurafsky,University of California at Berkeley@[2],1
+Dan Jurafsky,University of California at Berkeley,1
 William Kahan,University of Toronto,5
 Robert E. Kahn,City College of New York@Princeton University,12
 Avinash Kak,University of Madras@Indian Institute of Technology Delhi,0
@@ -181,29 +179,29 @@ Richard Karp,Harvard University,9
 Narendra Karmarkar,IIT Bombay@Caltech@University of California Berkeley,0
 Neeraj Kayal,IIT Kanpur,0
 Manolis Kellis,Massachusetts Institute of Technology,3
-Ken Kennedy (computer scientist),Rice University@New York University,0
-Brian Kernighan,University of Toronto@BASc@Princeton University@PhD,0
+Ken Kennedy,Rice University@New York University,0
+Brian Kernighan,University of Toronto@BASc@Princeton University,0
 Gregor Kiczales,Massachusetts Institute of Technology,0
 Peter T. Kirstein,University of Cambridge@Stanford University,3
 Stephen Cole Kleene,Amherst College@Princeton University,2
 Dan Klein,Cornell University@University of Oxford@Stanford University,2
 Leonard Kleinrock,City College of New York@MIT,6
-Andrew Koenig (programmer),Columbia University,0
-Michael K%C3%B6lling,University of Bremen@University of Sydney,3
+Andrew Koenig,Columbia University,0
+Michael Kölling,University of Bremen@University of Sydney,3
 Andrey Nikolaevich Kolmogorov,Moscow State University@Ph.D.,9
 Janet L. Kolodner,Brandeis University@Yale University,1
-Robert Kowalski,University of Chicago@University of Bridgeport@BA@Stanford University@MSc@University of Warsaw@University of Edinburgh@PhD,1
+Robert Kowalski,University of Chicago@University of Bridgeport@Stanford University@University of Warsaw@University of Edinburgh,1
 Joseph Kruskal,University of Chicago@Princeton University,0
 Maarja Kruusmaa,Tallinn University of Technology@Chalmers University of Technology,0
 Richard E. Ladner,St. Mary's College of California@University of California Berkeley,5
 Monica S. Lam,Carnegie Mellon University,0
-Leslie Lamport,Massachusetts Institute of Technology@BS@Brandeis University@MA@PhD,6
+Leslie Lamport,Massachusetts Institute of Technology@Brandeis University,6
 Butler Lampson,Harvard University@University of California Berkeley,6
 Chris Lattner,University of Portland@University of Illinois at Urbana-Champaign,2
 Edward D. Lazowska,Brown University@University of Toronto,0
 Manny M Lehman,Imperial College London,3
 Charles E. Leiserson,Carnegie Mellon University@Yale University,0
-Yann LeCun,ESIEE Paris@MS@Pierre and Marie Curie University@PhD,3
+Yann LeCun,ESIEE Paris@Pierre and Marie Curie University,3
 Rasmus Lerdorf,University of Waterloo,0
 Leonid Levin,Moscow University@Massachusetts Institute of Technology,1
 Kevin Leyton-Brown,McMaster University@Stanford University,0
@@ -218,16 +216,17 @@ Gillian Lovegrove,Newnham College Cambridge@Cambridge University,0
 David Luckham,Ph.D.@MIT,0
 Nancy Lynch,Brooklyn College@MIT,7
 Nadia Magnenat Thalmann,University of Geneva@École Polytechnique Fédérale de Lausanne,0
-James Martin (author),University of Oxford,2
+James Martin,University of Oxford,2
 Yuri Matiyasevich,Leningrad State University,2
 Yukihiro Matsumoto,University of Tsukuba@Shimane University,0
 John Mauchly,Johns Hopkins University,4
 Ujjwal Maulik,Nabadwip Bakultala High School@Calcutta University@Jadavpur University,0
 Derek McAuley,University of Cambridge,2
-John McCarthy (computer scientist),Princeton University@California Institute of Technology,6
-Andrew McCallum,Dartmouth College@University of Rochester@[2],0
+Conor McBride,University of Edinburgh,0
+John McCarthy,Princeton University@California Institute of Technology,6
+Andrew McCallum,Dartmouth College@University of Rochester,0
 Douglas McIlroy,Cornell University@Massachusetts Institute of Technology,0
-Kurt Mehlhorn,Cornell University@[2],4
+Kurt Mehlhorn,Cornell University,4
 Bertrand Meyer,Université de Nancy@Stanford University@École Polytechnique,0
 Silvio Micali,La Sapienza University of Rome@UC Berkeley,4
 Jack Minker,Brooklyn College@University of Wisconsin@University of Pennsylvania,3
@@ -237,11 +236,11 @@ Paul Mockapetris,Massachusetts Institute of Technology@University of California 
 Cleve Moler,California Institute of Technology@Stanford University,2
 Faron Moller,University of British Columbia@University of Waterloo@University of Edinburgh,0
 Edward F. Moore,Virginia Tech@Brown University,0
-Roger Moore (computer scientist),Stanford University,2
-Hans Moravec,Acadia University@[1]@University of Western Ontario@[1]@Stanford University@[1],0
+Roger Moore,Stanford University,2
+Hans Moravec,Acadia University@University of Western Ontario@Stanford University,0
 Rajeev Motwani,IIT Kanpur@B.Tech@C.S.@UC Berkeley@Ph.D.@C.S.,1
 Stephen Muggleton,University of Edinburgh,5
-Klaus-Robert M%C3%BCller,University of Karlsruhe@Diplom@University of Karlsruhe,1
+Klaus-Robert Müller,University of Karlsruhe@Diplom@University of Karlsruhe,1
 Alan Mycroft,University of Cambridge@University of Edinburgh,0
 Brad A. Myers,University of Toronto@Massachusetts Institute of Technology,4
 Makoto Nagao,Kyoto University,6
@@ -257,15 +256,15 @@ Donald Norman,MIT@University of Pennsylvania,0
 Peter Norvig,Brown University@University of California Berkeley,3
 George Novacky,University of Pittsburgh,0
 Martin Odersky,Ludwig Maximilian University of Munich@ETH Zurich,0
-Peter O%27Hearn,Dalhousie University@Queen's University,16
+Peter O'Hearn,Dalhousie University@Queen's University,16
 Mark Overmars,Utrecht University,0
 Susan Owicki,Cornell University,0
 Sankar Pal,Rajabazar Science College@University of Calcutta@Indian Statistical Institute@Imperial College London,2
-David Patterson (computer scientist),University of California Los Angeles,9
-Mihai P%C4%83tra%C8%99cu (computer scientist),Massachusetts Institute of Technology,0
+David Patterson,University of California Los Angeles,9
+Mihai Pătrașcu,Massachusetts Institute of Technology,0
 Lawrence Paulson,California Institute of Technology@Stanford University,2
 Randy Pausch,Brown University@Carnegie Mellon University,5
-Juan Pav%C3%B3n,Technical University of Madrid@Université Pierre et Marie Curie,0
+Juan Pavón,Technical University of Madrid@Université Pierre et Marie Curie,0
 Judea Pearl,Technion – Israel Institute of Technology@New Jersey Institute of Technology@Rutgers University@New York University Tandon School of Engineering,7
 Alan Perlis,Chemistry@Carnegie Mellon@MIT,2
 Radia Perlman,MIT,0
@@ -273,21 +272,21 @@ Simon Peyton Jones,University of Cambridge,2
 Keshav K Pingali,IIT Kanpur@MIT,3
 Gordon Plotkin,University of Glasgow@University of Edinburgh,3
 Cicely Popplewell,University of Cambridge,0
-Emil Post,City College of New York@[1]@Columbia University@[2],0
+Emil Post,City College of New York@Columbia University,0
 Franco Preparata,University of Rome,1
 William H. Press,Harvard University@California Institute of Technology,0
 Grzegorz Rozenberg,Polish Academy of Sciences,0
-Michael O. Rabin,Hebrew University of Jerusalem@MSc@University of Pennsylvania@Princeton University@PhD,10
+Michael O. Rabin,Hebrew University of Jerusalem@University of Pennsylvania@Princeton University,10
 Brian Randell,Imperial College London,0
 Anders P. Ravn,University of Copenhagen@Technical University of Denmark,1
-Raj Reddy,University of Madras@BE@University of New South Wales@MTech@Stanford University@PhD,4
+Raj Reddy,University of Madras@BE@University of New South Wales@MTech@Stanford University,4
 David P. Reed,MIT,0
 Joyce K. Reynolds,University of Southern California,0
-Martin Richards (computer scientist),University of Cambridge,0
+Martin Richards,University of Cambridge,0
 C. J. van Rijsbergen,University of Western Australia@University of Cambridge,0
-Dennis Ritchie,Harvard University@BS,10
+Dennis Ritchie,Harvard University,10
 Ron Rivest,Stanford University@Yale University,5
-Ken Robinson (computer scientist),University of Sydney,1
+Ken Robinson,University of Sydney,1
 Guido van Rossum,University of Amsterdam,1
 Jeff Rulifson,University of Washington@Stanford University,0
 George Sadowsky,Harvard University,0
@@ -297,22 +296,22 @@ Carl Sassenrath,University of California Davis,0
 Mahadev Satyanarayanan,Carnegie Mellon University (Ph.D.)@IIT Madras (M.Tech. B.Tech.),5
 Walter Savitch,University of California Berkeley,0
 Jonathan Schaeffer,University of Waterloo@University of Toronto,2
-J%C3%BCrgen Schmidhuber,Technical University of Munich,0
-Steve Schneider (computer scientist),University of Oxford,0
+Jürgen Schmidhuber,Technical University of Munich,0
+Steve Schneider,University of Oxford,0
 Bruce Schneier,American University@University of Rochester,0
 Fred B. Schneider,Stony Brook University,1
 Sarita Schoenebeck,Georgia Institute of Technology@University of California Berkeley@Dartmouth College,0
-Bernhard Sch%C3%B6lkopf,University of London@University of Tübingen@TU Berlin,6
-Robert Sedgewick (computer scientist),Brown University,2
+Bernhard Schölkopf,University of London@University of Tübingen@TU Berlin,6
+Robert Sedgewick,Brown University,2
 Ravi Sethi,Indian Institute of Technology Kanpur@Princeton University,0
 Nigel Shadbolt,Newcastle University@University of Edinburgh,1
 Adi Shamir,Tel Aviv University@Weizmann Institute of Science,7
-Claude Shannon,University of Michigan@AB@BS@Massachusetts Institute of Technology@MS@PhD,10
+Claude Shannon,University of Michigan@AB@Massachusetts Institute of Technology,10
 Scott Shenker,Brown University@University of Chicago,5
 Ben Shneiderman,City College of New York@Stony Brook University,1
 Joseph Sifakis,National Technical University of Athens@University of Grenoble,2
 Munindar P. Singh,University of Texas at Austin@Indian Institute of Technology Delhi,6
-Ramesh Sitaraman,Indian Institute of Technology Madras@[2]@Princeton University@[2],0
+Ramesh Sitaraman,Indian Institute of Technology Madras@Princeton University,0
 Daniel Sleator,University of Illinois at Urbana–Champaign@Stanford University,1
 Brian Cantwell Smith,MIT,0
 David Canfield Smith,Oberlin College@Stanford University,0
@@ -320,22 +319,22 @@ Carol Spradling,University of Nebraska - Lincoln,0
 Rohini Kesavan Srihari,University of Waterloo@University at Buffalo,0
 Sargur Srihari,Bangalore University@Indian Institute of Science@Ohio State University,2
 Richard E. Stearns,Carleton College@Princeton University,3
-Thomas Sterling (computing),Old Dominion University@Massachusetts Institute of Technology,6
+Thomas Sterling,Old Dominion University@Massachusetts Institute of Technology,6
 W. Richard Stevens,University of Michigan@University of Arizona,0
 Michael Stonebraker,Princeton University@University of Michigan,2
 Christopher Strachey,University of Cambridge,0
 Volker Strassen,University of Göttingen,0
-Bjarne Stroustrup,Aarhus University@Cand.scient.@University of Cambridge@PhD,11
+Bjarne Stroustrup,Aarhus University@Cand.scient.@University of Cambridge,11
 Madhu Sudan,IIT Delhi@University of California Berkeley,1
 Bert Sutherland,RPI@MIT,1
-Ivan Sutherland,MIT@Caltech@Carnegie Institute of Technology,8
+Ivan Sutherland,Carnegie Institute of Technology@California Institute of Technology@Massachusetts Institute of Technology,8
 Mario Szegedy,University of Chicago,1
 Andrew S. Tanenbaum,Massachusetts Institute of Technology@University of California Berkeley,0
 Austin Tate,Lancaster University@University of Edinburgh,1
 Bernhard Thalheim,Dresden University of Technology@Lomonosov Moscow State University,2
-%C3%89va Tardos,Eötvös Loránd University,5
-G%C3%A1bor Tardos,Eötvös Loránd University,4
-Robert Tarjan,California Institute of Technology@BS@Stanford University@MS@PhD,3
+Éva Tardos,Eötvös Loránd University,5
+Gábor Tardos,Eötvös Loránd University,4
+Robert Tarjan,California Institute of Technology@Stanford University,3
 Shang-Hua Teng,Shanghai Jiao Tong University@University of Southern California@Carnegie Mellon,4
 Larry Tesler,Stanford University,0
 Charles P. Thacker,University of California Berkeley,6
@@ -344,10 +343,10 @@ Ken Thompson,University of California Berkeley,11
 Sebastian Thrun,University of Bonn@University of Hildesheim,3
 Walter F. Tichy,Technische Universität München@Carnegie Mellon University,0
 Chai Keong Toh,University of Cambridge@University of Manchester,8
-Linus Torvalds,University of Helsinki@[1],0
+Linus Torvalds,University of Helsinki,0
 Gloria Townsend,Indiana University,1
 John Tukey,Brown University@Princeton University,7
-Alan Turing,University of Cambridge@BA@MA@Princeton University,1
+Alan Turing,University of Cambridge@Princeton University,1
 Murray Turoff,University of California - Berkeley@Brandeis University,1
 Jeffrey D. Ullman,Columbia University@Princeton University,3
 Leslie Valiant,University of Cambridge@Imperial College London@University of Warwick,6
@@ -359,15 +358,15 @@ Sergiy Vilkomir,Kharkov State University@Kharkov Polytechnic Institute,2
 Paul Vitanyi,Delft University of Technology@Free University of Amsterdam,0
 Paul Vixie,Keio University,0
 David Waltz,Massachusetts Institute of Technology,2
-James Z. Wang,Stanford University@M.S.@M.S.@Ph.D.@University of Minnesota@B.S.,0
+James Z. Wang,Stanford University@Ph.D.@University of Minnesota,0
 Manfred K. Warmuth,University of Colorado Boulder,1
 David H. D. Warren,University of Edinburgh,0
 Kevin Warwick,Aston University@Imperial College London,5
 Jan Weglarz,Poznań University of Technology,0
 Philip Wadler,Stanford University@Carnegie Mellon University,4
-Peter Wegner,[1],2
+Peter Wegner,,2
 Peter J. Weinberger,University of California Berkeley,0
-Mark Weiser,New College of Florida@University of Michigan@MA@PhD,0
+Mark Weiser,New College of Florida@University of Michigan,0
 Joseph Weizenbaum,Wayne State University,0
 Jennifer Widom,Cornell University@Indiana University Jacobs School of Music,6
 Gio Wiederhold,University of California San Francisco,3
@@ -378,7 +377,7 @@ Yorick Wilks,University of Cambridge,0
 James H. Wilkinson,Trinity College Cambridge,4
 Shmuel Winograd,New York University@Massachusetts Institute of Technology,0
 Terry Winograd,Colorado College@Massachusetts Institute of Technology,1
-Patrick Winston,MIT@[1],1
+Patrick Winston,MIT,1
 Neil Wiseman,University of Cambridge@University of Illinois@Queen Mary College,0
 Stephen Wolfram,St. John's College Oxford@California Institute of Technology,1
 Mike Woodger,University College London,0
@@ -390,7 +389,7 @@ John Yen,University of California Berkeley@Santa Clara University@National Taiwa
 Edward Yourdon,Massachusetts Institute of Technology,0
 Moti Yung,Columbia University,6
 Lotfi Zadeh,University of Tehran@Massachusetts Institute of Technology@Columbia University,15
-Arif Zaman,Stanford University@[2]@Harvey Mudd College@Claremont Graduate University,0
+Arif Zaman,Stanford University@Harvey Mudd College@Claremont Graduate University,0
 Stanley Zdonik,Massachusetts Institute of Technology,0
 Hussein Zedan,University of Bristol,0
 Shlomo Zilberstein,University of California Berkeley@Technion – Israel Institute of Technology,0

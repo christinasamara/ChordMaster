@@ -2,10 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 import re
+from unidecode import unidecode
+from urllib.parse import unquote
 
 with open('data.csv', 'w', newline='\n', encoding="utf-8") as csv_file:
     csv_writer = csv.writer(csv_file)
-    csv_writer.writerow(["NAME", "EDUCATION", "AWARDS"])
 # URL of the Wikipedia article
 url = "https://en.wikipedia.org/wiki/List_of_computer_scientists"
 
@@ -38,7 +39,9 @@ if response.status_code == 200:
             infobox_table = scientist_soup.find('table', {'class': 'infobox biography vcard'})
 
             if infobox_table:
-                name = link.split("/")[-1].replace("_", " ")
+                name1 = link.split("/")[-1].replace("_", " ")
+                modified_name = re.sub(r'\([^)]*\)', '', name1).strip()
+                name = unquote(modified_name)
                 alma_mater = []
                 awards = None
 
@@ -61,7 +64,8 @@ if response.status_code == 200:
                     awards = 0
                 if not alma_mater:
                     continue
-                alma_mater_str = '@'.join([value.replace(', ', ' ') for value in alma_mater])
+                alma_mater_final = [item for item in alma_mater if item not in ["MS", "BS", "BSc", "MSc", "PhD", "B.S.", "M.S.", "[1]", "BA", "MA", "[2]"]]
+                alma_mater_str = '@'.join([value.replace(', ', ' ') for value in alma_mater_final])
                 with open('data.csv', 'a', newline='\n', encoding="utf-8") as csv_file:
                     csv_writer = csv.writer(csv_file)
                     csv_writer.writerow([name, alma_mater_str, awards])                
