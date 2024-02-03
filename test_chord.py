@@ -16,7 +16,6 @@ lookup_times = []
 nodes = [Node(i) for i in range(SIZE)]
 start = timer()
 nodes[0].join(nodes[0])
-nodes[0].visualize_chord_ring()
 
 with open("data.csv", 'r') as file:
     for row in file:
@@ -34,6 +33,10 @@ for i in range(1, SIZE):
     nodes[0].join(nodes[i])
     end = timer()
     join_times.append(end-start)
+nodes[0].visualize_chord_ring()
+
+nodes[5].delete()
+
 
 
 nodes[0].visualize_chord_ring()

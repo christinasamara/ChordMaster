@@ -29,7 +29,6 @@ class Node:
         return key % SIZE
     
 
-
     # in a circle from id1 to id2
     def distance(self, id1, id2):
         if ( id1 <= id2 ):
@@ -65,7 +64,7 @@ class Node:
             self.prev = newNode
             self.fingerTable.append(newNode)
 
-            # updated by stabilization
+            # update
             self.updateFingerTable()
             self.stabilization()
 
@@ -144,7 +143,7 @@ class Node:
 
             for key, value in current_node.data.items():
                 for key2, value2 in value.items():
-                    if scientist_surname in key2: # and (scientist_name is None or scientist_name == value.get('name', '')):
+                    if scientist_surname in key2 and (scientist_name == None or scientist_name in key2): # and (scientist_name is None or scientist_name == value.get('name', '')):
                         if key2 not in results:
                             results[key2] = {"alma mater": [key], "awards": value2}
                         else:
@@ -172,10 +171,9 @@ class Node:
             self.data.clear()
             pass
         else:
-            extra_node = self.prev
+            nextNode = self.fingerTable[0]
             self.prev.fingerTable[0] = self.fingerTable[0]
             self.fingerTable[0].prev = self.prev
-
 
             # transfer the data to the next node
             for key, value in self.data.items():
@@ -184,23 +182,26 @@ class Node:
 
             # they are being updated by stabilization anyway
             self.prev.updateFingerTable()
-            self.fingerTable[0].updateFingerTable()
+            nextNode.updateFingerTable()
             
-            deleted_node = self
-            startnode = self.prev
-            current_node = startnode.fingerTable[0]
-            while True:
-                if current_node == startnode:
-                    break
-                for i in range(len(current_node.fingerTable)):
-                    if current_node.fingerTable[i] == deleted_node:
-                        current_node.fingerTable[i] = deleted_node.fingerTable[0]
-                current_node = current_node.fingerTable[0]
-
-
+            # delete instances of deletedNode in other fingertTables (before stabilization)
+            # deleted_node = self
+            # startnode = self.prev
+            # current_node = startnode.fingerTable[0]
+            # while True:
+            #     if current_node == startnode:
+            #         break
+            #     for i in range(len(current_node.fingerTable)):
+            #         if current_node.fingerTable[i] == deleted_node:
+            #             current_node.fingerTable[i] = deleted_node.fingerTable[0]
+            #     current_node = current_node.fingerTable[0]
 
             self.prev.stabilization()
+            self.fingerTable[0].stabilization()
+            nextNode.updateFingerTable()
+            nextNode.stabilization()
 
+# 
 
 
     def visualize_chord_ring(self):
