@@ -73,6 +73,8 @@ nodes[0].visualize_chord_ring()
 # 
 
 
+
+
 results= nodes[1].search_scientist("Blum")
 for scientist in results:
     print("Name: ", scientist)

@@ -37,13 +37,13 @@ class Node:
             return SIZE - id1 + id2
 
 
-    def lookupNode(self, node_id):
-        hashId = self.getHashId(node_id)
+    def lookupNode(self, id):
+        hashId = self.getHashId(id)
 
         if (self.id == hashId):
             return self
         
-        # between current node and its successor, successor is returned
+        # successor is returned -> id is between current and successor
         if self.distance(self.id, hashId) <= self.distance(self.fingerTable[0].id, hashId):
             return self.fingerTable[0]
         
@@ -73,7 +73,7 @@ class Node:
             return
         
         else: 
-            # we found an afternode, update previous and next and FT
+            # found afternode, update previous, next and FT
             afterNode.prev.fingerTable[0] = newNode
             newNode.prev = afterNode.prev
             afterNode.prev = newNode
@@ -185,6 +185,7 @@ class Node:
             nextNode.updateFingerTable()
             
             # delete instances of deletedNode in other fingertTables (before stabilization)
+
             # deleted_node = self
             # startnode = self.prev
             # current_node = startnode.fingerTable[0]
@@ -200,8 +201,7 @@ class Node:
             self.fingerTable[0].stabilization()
             nextNode.updateFingerTable()
             nextNode.stabilization()
-
-# 
+ 
 
 
     def visualize_chord_ring(self):
