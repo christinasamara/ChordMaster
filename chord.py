@@ -111,7 +111,7 @@ class Node:
             else:
                 node_home.data[edu][name] = awards
 
-    def search_education(self, education_string, awards):
+    def search_education(self, education_string, awards=0):
         hashed_education = hashing.hashed(education_string) % SIZE
         result_list = []
         search_node = self.lookupNode(hashed_education)
@@ -132,14 +132,11 @@ class Node:
         for key, value in self.data.items():
             for key2 in value.keys():
                 if scientist_surname in key2 and (scientist_name == None or scientist_name in key2): # and (scientist_name is None or scientist_name == value.get('name', '')):
-                    result_list.append(key)
+                    results[key2] = {"alma mater": [key], "awards": value2}
 
         # Search in the finger table nodes
         current_node = self.fingerTable[0]
-        visited_nodes = set()
-        visited_nodes.add(self.id)
-        while current_node != self and current_node.id not in visited_nodes:
-            visited_nodes.add(current_node.id)
+        while current_node != self:
 
             for key, value in current_node.data.items():
                 for key2, value2 in value.items():
@@ -151,7 +148,7 @@ class Node:
                         
 
             # Move to the next node in the finger table
-            current_node = current_node.fingerTable[0] if current_node.fingerTable else self
+            current_node = current_node.fingerTable[0]
 
         return results
 
