@@ -45,7 +45,7 @@ nodes[0].visualize_chord_ring()
 nodes[10].delete()
 nodes[0].visualize_chord_ring()
 
-
+# LOOKUP TIMES
 # for i in range(0, SIZE):
 #     for j in range(0, SIZE):
 #         start = timer()
@@ -53,21 +53,25 @@ nodes[0].visualize_chord_ring()
 #         end = timer()
 #         lookup_times.append(end-start)
 
-
-# for i in range(0, SIZE/2):
-#     start = timer()
-#     nodes[i].delete()
-#     end = timer()
-#     delete_times.append(end-start)
-
-
+# DELETE TIMES
+for i in range(0, SIZE):
+    start = timer()
+    nodes[i].delete()
+    end = timer()
+    delete_times.append(end-start)
 
 
 
 
-# print("join_times", join_times)
-# print("delete_times", delete_times)
+
+
+#print("join_times", statistics.mean(join_times[1:]))
+#print("join_times", join_times)
+        
 # print("lookup_times", statistics.mean(lookup_times))
+# print("lookup_times standard dev", statistics.stdev(lookup_times))
+    
+print("delete_times", delete_times)
 
 # result = nodes[1].search_education("Massachusetts Institute of Technology", 0)
 # print(result)
