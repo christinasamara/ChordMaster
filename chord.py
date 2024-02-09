@@ -5,21 +5,11 @@ import holoviews as hv
 from holoviews import opts, dim
 hv.extension('bokeh')
 import pandas as pd
-from test_chord import SIZE
+import hashing
 
-def sort_characters(text):
-    stop_words = ["University", "of", "Institute"]
-    cleaned_text = ' '.join(word for word in text.split() if word not in stop_words)
-    alphabet_chars = ''.join(char for char in cleaned_text if char.isalpha())
-    sorted_text = ''.join(sorted(alphabet_chars))
-    return sorted_text
+K = 4
+SIZE = 2 ** K
 
-def hashed(input_string):
-    sha256 = hashlib.sha256()
-    new_string = sort_characters(input_string)
-    sha256.update(new_string.encode())
-    hashed_value = int(sha256.hexdigest(), 16)
-    return hashed_value
 
 class Node:
     def __init__(self, id, prev=None):
@@ -92,7 +82,7 @@ class Node:
 
             # transfer suitable data to newNode and delete them from afterNode
             for key, value in afterNode.data.items():
-                hashId = hashed(key) % SIZE
+                hashId = hashing.hashed(key) % SIZE
                 if (self.distance(hashId, newNode.id) < self.distance(hashId, afterNode.id)):
                     newNode.data[key] = afterNode.data[key]
                     # mark which entries are to be deleted since transfered
@@ -112,7 +102,7 @@ class Node:
         # find corresponding chord node
         education = universities.split("@") # it's a list
         for edu in education:
-            hashed_key = hashed(edu)
+            hashed_key = hashing.hashed(edu)
             node_home = self.lookupNode(hashed_key)
 
             if edu not in node_home.data.keys():
@@ -122,7 +112,7 @@ class Node:
                 node_home.data[edu][name] = awards
 
     def search_education(self, education_string, awards=0):
-        hashed_education = hashed(education_string) % SIZE
+        hashed_education = hashing.hashed(education_string) % SIZE
         result_list = []
         search_node = self.lookupNode(hashed_education)
         for university in search_node.data.keys():

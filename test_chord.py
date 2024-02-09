@@ -1,13 +1,10 @@
-from chord import Node
+from chord import Node, K, SIZE
 import time
 import pandas as pd
 import csv
 import time
 from timeit import default_timer as timer
 import statistics
-
-K = 5
-SIZE = 2 ** K
 
 join_times = []
 deletion_times = []
