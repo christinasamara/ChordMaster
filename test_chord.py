@@ -10,7 +10,7 @@ K = 5
 SIZE = 2 ** K
 
 join_times = []
-delete_times = []
+deletion_times = []
 lookup_times = []
 
 nodes = [Node(i) for i in range(SIZE)]
@@ -49,15 +49,15 @@ nodes[0].visualize_chord_ring()
 # print("lookup_times standard dev", statistics.stdev(lookup_times))
 
 
-# DELETE TIMES
+# DELETION TIMES
 # for i in range(0, SIZE):
 #     start = timer()
 #     nodes[i].delete(i)
 #     end = timer()
-#     delete_times.append(end-start)
+#     deletion_times.append(end-start)
 
 
-# print("delete_times", delete_times)
+# print("deletion_times", deletion_times)
 
 
 # SEARCH BY ALMA MATER
