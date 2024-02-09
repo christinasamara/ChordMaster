@@ -8,7 +8,7 @@ import pandas as pd
 import hashing
 
 
-K = 4
+K = 5
 SIZE = 2 ** K
 
 class Node:

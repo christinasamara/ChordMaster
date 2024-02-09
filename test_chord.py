@@ -6,7 +6,7 @@ import time
 from timeit import default_timer as timer
 import statistics
 
-K = 4
+K = 5
 SIZE = 2 ** K
 
 join_times = []
@@ -33,16 +33,8 @@ for i in range(1, SIZE):
     end = timer()
     join_times.append(end-start)
 
+# print("join_times", join_times)
 
-nodes[0].visualize_chord_ring()
-
-nodes[5].delete()
-
-
-
-nodes[0].visualize_chord_ring()
-
-nodes[10].delete()
 nodes[0].visualize_chord_ring()
 
 # LOOKUP TIMES
@@ -53,39 +45,44 @@ nodes[0].visualize_chord_ring()
 #         end = timer()
 #         lookup_times.append(end-start)
 
-# DELETE TIMES
-for i in range(0, SIZE):
-    start = timer()
-    nodes[i].delete()
-    end = timer()
-    delete_times.append(end-start)
-
-
-
-
-
-
-#print("join_times", statistics.mean(join_times[1:]))
-#print("join_times", join_times)
-        
 # print("lookup_times", statistics.mean(lookup_times))
 # print("lookup_times standard dev", statistics.stdev(lookup_times))
-    
-print("delete_times", delete_times)
 
-# result = nodes[1].search_education("Massachusetts Institute of Technology", 0)
+
+# DELETE TIMES
+# for i in range(0, SIZE):
+#     start = timer()
+#     nodes[i].delete()
+#     end = timer()
+#     delete_times.append(end-start)
+
+# print("delete_times", delete_times)
+
+
+# SEARCH BY ALMA MATER
+# start = timer()
+# result = nodes[1].search_education("Massachusetts Institute of Technology", 2)
+# end = timer()
+# search_time = end-start
 # print(result)
+# print(search_time)
+
+
+
+
+# SEARCH BY SURNAME AND NAME
+# start = timer()
+# results= nodes[1].search_scientist("Blum", "Lenore")
+# end = timer()
+# search_time = end-start
+# print(search_time)
 # 
-
-
-
-
-# results= nodes[1].search_scientist("Blum")
 # for scientist in results:
 #     print("Name: ", scientist)
 #     print("Alma Mater: ", results[scientist]["alma mater"])
 #     print("Awards: ", results[scientist]["awards"])
 #     print()
+
 
 # PRINT ALL NODE.DATA LENGTHS
 # for node in nodes:
