@@ -52,9 +52,10 @@ nodes[0].visualize_chord_ring()
 # DELETE TIMES
 # for i in range(0, SIZE):
 #     start = timer()
-#     nodes[i].delete()
+#     nodes[i].delete(i)
 #     end = timer()
 #     delete_times.append(end-start)
+
 
 # print("delete_times", delete_times)
 

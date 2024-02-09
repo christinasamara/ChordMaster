@@ -163,22 +163,23 @@ class Node:
         # add timer so stabilizarion() is running frequently
 
 
-    def delete(self):
-        if (self.prev == self and self.fingerTable[0] == self):
-            self.data.clear()
+    def delete(self, id):
+        delNode = self.lookupNode(id)
+        if (delNode.prev == delNode and delNode.fingerTable[0] == delNode):
+            delNode.data.clear()
             pass
         else:
-            nextNode = self.fingerTable[0]
-            self.prev.fingerTable[0] = self.fingerTable[0]
-            self.fingerTable[0].prev = self.prev
+            nextNode = delNode.fingerTable[0]
+            delNode.prev.fingerTable[0] = delNode.fingerTable[0]
+            delNode.fingerTable[0].prev = delNode.prev
 
             # transfer the data to the next node
-            for key, value in self.data.items():
-                self.fingerTable[0].data[key] = value
-            self.data.clear()
+            for key, value in delNode.data.items():
+                delNode.fingerTable[0].data[key] = value
+            delNode.data.clear()
 
             # they are being updated by stabilization anyway
-            self.prev.updateFingerTable()
+            delNode.prev.updateFingerTable()
             nextNode.updateFingerTable()
             
             # delete instances of deletedNode in other fingertTables (before stabilization)
@@ -194,8 +195,8 @@ class Node:
             #             current_node.fingerTable[i] = deleted_node.fingerTable[0]
             #     current_node = current_node.fingerTable[0]
 
-            self.prev.stabilization()
-            self.fingerTable[0].stabilization()
+            delNode.prev.stabilization()
+            delNode.fingerTable[0].stabilization()
             nextNode.updateFingerTable()
             nextNode.stabilization()
  
