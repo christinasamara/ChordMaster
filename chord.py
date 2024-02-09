@@ -5,10 +5,7 @@ import holoviews as hv
 from holoviews import opts, dim
 hv.extension('bokeh')
 import pandas as pd
-
-
-K = 5
-SIZE = 2 ** K
+from test_chord import SIZE
 
 def sort_characters(text):
     stop_words = ["University", "of", "Institute"]
