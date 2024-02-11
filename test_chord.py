@@ -32,6 +32,7 @@ for i in range(1, SIZE):
 
 # print("join_times", join_times)
 
+# VISUAL
 nodes[0].visualize_chord_ring()
 
 # LOOKUP TIMES
